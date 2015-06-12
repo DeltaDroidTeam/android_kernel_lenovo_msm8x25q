@@ -136,7 +136,9 @@ static struct clock_state drv_state = { 0 };
  * the reinitalize_freq_table() function.
  */
 static struct clkctl_acpu_speed acpu_freq_tbl_cmn[] = {
-	{ 0, 19200, ACPU_PLL_TCXO, 0, 0, 2400, 3, 0, 30720 },
+	{ 1, 19200, ACPU_PLL_TCXO, 0, 0, 2400, 3, 0, 30720 },
+	{ 1, 122880, ACPU_PLL_1, 1, 1, 15360, 3, MAX_NOMINAL_VOLTAGE, 61440 },
+	{ 1, 196608, ACPU_PLL_1, 1, 0,  65536, 2, MAX_NOMINAL_VOLTAGE, 98304 },
 	{ 1, 245760, ACPU_PLL_1, 1, 0, 30720, 3, MAX_NOMINAL_VOLTAGE, 61440 },
 	{ 1, 320000, ACPU_PLL_0, 4, 2, 40000, 3, MAX_NOMINAL_VOLTAGE, 122880 },
 	{ 1, 480000, ACPU_PLL_0, 4, 1, 60000, 3, MAX_NOMINAL_VOLTAGE, 122880 },
